@@ -1,4 +1,4 @@
-const { expect } = require('chai')
+const { expect } = require('chai').use(require("chai-sorted"))
 const quickSort = require('../lib/quickSort.js');
 
 describe('quickSort', () => {

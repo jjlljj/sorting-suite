@@ -1,4 +1,4 @@
-const { expect } = require('chai')
+const { expect } = require('chai').use(require("chai-sorted"))
 const mergeSort = require('../lib/mergeSort.js');
 
 describe('mergeSort', () => {
