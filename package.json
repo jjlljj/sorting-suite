@@ -5,6 +5,7 @@
   "main": "bubbleSort-test.js",
   "dependencies": {},
   "devDependencies": {
+    "@jjlljj/random-number-gen": "git+https://github.com/jjlljj/random-number-gen.git",
     "chai": "^4.1.2",
     "chai-sorted": "^0.1.0",
     "mocha": "^4.0.1"
