@@ -1,5 +1,6 @@
 const { expect } = require('chai').use(require("chai-sorted"))
 const mergeSort = require('../lib/mergeSort.js');
+const { randomNumberGen } = require('@jjlljj/random-number-gen')
 
 describe('mergeSort', () => {
   it('should be a function', () => {
@@ -16,4 +17,21 @@ describe('mergeSort', () => {
     expect(mergeSort(array)).to.deep.equal([-5, -1, 2, 3, 4])
   })
 
+  it('should sort an array of 101 numbers', ()=> {
+    const array = randomNumberGen(101, 250)
+    expect(array.length).to.equal(101)
+    expect(mergeSort(array)).to.be.sorted()
+  })
+
+  it('should sort an array of 10,000 numbers', ()=> {
+    const array = randomNumberGen(10000, 25000)
+    expect(array.length).to.equal(10000)
+    expect(mergeSort(array)).to.be.sorted()
+  })
+
+  it('should sort an array of 100,000 numbers', ()=> {
+    const array = randomNumberGen(100000, 250000)
+    expect(array.length).to.equal(100000)
+    expect(mergeSort(array)).to.be.sorted()
+  })
 })
