@@ -23,6 +23,12 @@ describe('mergeSort', () => {
     expect(mergeSort(array)).to.be.sorted()
   })
 
+  it('should sort an array of 1001 numbers', ()=> {
+    const array = randomNumberGen(1001, 1500)
+    expect(array.length).to.equal(1001)
+    expect(mergeSort(array)).to.be.sorted()
+  })
+
   it('should sort an array of 10,000 numbers', ()=> {
     const array = randomNumberGen(10000, 25000)
     expect(array.length).to.equal(10000)
